@@ -6,17 +6,17 @@
 ## The makeCacheMatrix function creates a list containing a function to set the value of the matrix,
 ## get the value of the matrix, set the inverse of the matrix and get the inverse of the matrix
 
-makeCacheMatrix <- function(data_matrix = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
   
     stored_inv <- NULL
     
     set <- function(y) {                            ## Sets the value of the matrix
-        data_matrix <<- y
+        x <<- y
         stored_inv <<- NULL
     }
     
     get <- function() {                             ## Returns the value of the matrix
-        return (data_matrix)
+        return (x)
     }
     
     setinv <- function(sent_replacement_inv){       ## Sets the calculated inverse of the matrix
